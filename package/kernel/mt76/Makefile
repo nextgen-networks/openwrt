@@ -6,11 +6,11 @@ PKG_RELEASE=1
 PKG_LICENSE:=GPLv2
 PKG_LICENSE_FILES:=
 
-PKG_SOURCE_URL:=https://github.com/openwrt/mt76
+PKG_SOURCE_URL:=https://github.com/danpawlik/mt76
 PKG_SOURCE_PROTO:=git
-PKG_SOURCE_DATE:=2024-09-05
-PKG_SOURCE_VERSION:=65cc3daf2a332cc658e9f7438cdadde4392e672e
-PKG_MIRROR_HASH:=c29c4f883051a6360119156a03e010ac11573011b23d9e873f83c720600970e7
+PKG_SOURCE_DATE:=2024-09-08
+PKG_SOURCE_VERSION:=655d16f71498e91935ea513403f47581308de0e3
+# PKG_MIRROR_HASH:=c29c4f883051a6360119156a03e010ac11573011b23d9e873f83c720600970e7
 
 PKG_MAINTAINER:=Felix Fietkau <nbd@nbd.name>
 PKG_USE_NINJA:=0
@@ -638,6 +638,10 @@ define KernelPackage/mt7996-firmware/install
 		$(PKG_BUILD_DIR)/firmware/mt7996/mt7996_rom_patch.bin \
 		$(PKG_BUILD_DIR)/firmware/mt7996/mt7996_wa.bin \
 		$(PKG_BUILD_DIR)/firmware/mt7996/mt7996_wm.bin \
+		$(PKG_BUILD_DIR)/firmware/mt7996/mt7996_wa_233.bin \
+		$(PKG_BUILD_DIR)/firmware/mt7996/mt7996_wm_233.bin \
+		$(PKG_BUILD_DIR)/firmware/mt7996/mt7996_rom_patch_233.bin \
+		$(PKG_BUILD_DIR)/firmware/mt7996/mt7996_eeprom_233.bin \
 		$(1)/lib/firmware/mediatek/mt7996
 endef
 
